@@ -56,31 +56,32 @@ $posts = [
                         Lista dei post
                     </h1>
                     <?php
+
+                    $keyMap = array_keys($posts);
+
+                    var_dump($keyMap);
+                    for($i = 0; $i < count($posts); $i++) {
+                        $key = $key_map[$i];
+                        $value = $posts[$key];
+
+                        echo "<li>" . $key;
+
+                        echo "ul";
+
+                        for ($y = 0; $y < count($value); $y++) {
+                            $singlePost = $value[$y];
+                            
+                            echo "<li>";
+                            echo "<strong>" . $singlePost["title"] . "</strong><br>";
+                            echo "<em>" . $singlePost["author"] . "</em><br>";
+                            echo "<p>" . $singlePost["testo"] . "</p>";
+                        }
+
+                        echo "</ul>";
+
+                        echo "</li";
+                    }
                     
-                    foreach ($posts as $date => $date_posts) { ?>
-                        <h2><?php echo $date ?></h2>
-                        <div class="posts clearfix">
-                            <?php
-                            foreach ($date_posts as $post) { ?>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <?php echo $post['title']; ?>
-                                        </h5>
-                                        <p class="card-text">
-                                            <?php echo $post['text'] ?>
-                                        </p>
-                                        <em>
-                                            <?php echo $post['author'] ?>
-                                        </em>
-                                    </div>
-                                </div>
-                                <?php
-                            } 
-                            ?>
-                        </div>
-                        <?php
-                    } 
                     ?>
                 </div>
             </div>
