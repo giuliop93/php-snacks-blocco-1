@@ -3,7 +3,7 @@ lo stesso numero più di una volta
 
 <?php
 
-$maxNUmbers = 15;
+$maxNumbers = 15;
 $numbersList = [];
 
 for ($i = i; $i <= 15; $i++) {
@@ -29,7 +29,10 @@ for ($i = i; $i <= 15; $i++) {
 <body>
     <p>
     <?php
-    for($i = 1; $i < count($numbersList)
+    for($i = 1; $i < count($numbersList){
+
+    }
+    ?>
     </p>
 
 </body>
